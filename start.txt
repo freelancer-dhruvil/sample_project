@@ -1,2 +1,12 @@
 project inintialized
-updated
+
+
+to use second github account in the same windows laptop:
+- generated ssh keys using: ssh-keygen -t rsa -C "stefano@work.com"
+- created a config file at: .ssh\config
+- in this config file, 
+    Host is aliasing, for git@git-alias-domain.com... in ssh url
+    Host name should be the domain name of server: github.com
+    IdentityFile is the file containing the path of ras_id file
+- once this is added, verify all the ssh domain alias: ssh -T git@github-alias-domain.com
+- while working with the repository that is not from default account, set remote origin as "git@github-alias-domain.com:username/repo.git"
