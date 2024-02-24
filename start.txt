@@ -1,7 +1,8 @@
-project inintialized
+project initialized
 
 
 to use second github account in the same windows laptop:
+
 - generated ssh keys using: ssh-keygen -t rsa -C "stefano@work.com"
 - created a config file at: .ssh\config
 - in this config file, 
@@ -10,3 +11,17 @@ to use second github account in the same windows laptop:
     IdentityFile is the file containing the path of ras_id file
 - once this is added, verify all the ssh domain alias: ssh -T git@github-alias-domain.com
 - while working with the repository that is not from default account, set remote origin as "git@github-alias-domain.com:username/repo.git"
+
+
+to start a new website Freelancing project under "freelancing-qa" in firebase:
+- create a folder locally
+- create or generate a basic project if applicable
+- initialize firebase repository in the project
+- set git remote and commit it to github accordingly
+- create a new site on firebase => firebase hosting:sites:create new-site-domain
+- add target in firebase.json file => "target": "some-unique-name"
+- Apply target to site => firebase target:apply hosting TARGET_NAME RESOURCE_IDENTIFIER
+- check locally, build the project if needed => firebase emulators:start --only hosting:TARGET_NAME
+
+TO-DO:
+- check for build, how to work with automatic build
